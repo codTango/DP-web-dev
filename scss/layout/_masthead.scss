@@ -9,7 +9,7 @@ header.masthead {
   background-position: center center;
   background-size: cover;
   .intro-text {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 100px;
     .intro-lead-in {
       font-size: 22px;
@@ -23,8 +23,14 @@ header.masthead {
       margin-bottom: 25px;
       @include heading-font;
       text-align: center;
-      // margin-right: 70%;
     }
+  }
+  .scrollDownBtn {
+    border: 1px solid $white;
+    color: $white;
+    font-weight: 100;
+    margin: 0 auto;
+    width: 50px;
   }
 }
 @media(min-width:768px) {
@@ -45,6 +51,41 @@ header.masthead {
         @include heading-font;
         text-align: center;
       }
+    }
+    .scrollDownBtn {
+      border: 1px solid $white;
+      color: $white;
+      font-weight: 100;
+      margin: 0 auto;
+      width: 50px;
+    }
+  }
+}
+@media(min-width:1024px) {
+  header.masthead {
+    .intro-text {
+      padding-top: 150px;
+      padding-bottom: 150px;
+      .intro-lead-in {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 25px;
+        @include heading-font;
+      }
+      .intro-heading {
+        font-size: 75px;
+        line-height: 75px;
+        margin-bottom: 25px;
+        @include heading-font;
+        text-align: center;
+      }
+    }
+    .scrollDownBtn {
+      border: 1px solid $white;
+      color: $white;
+      font-weight: 100;
+      margin: 0 auto;
+      width: 50px;
     }
   }
 }
@@ -70,6 +111,13 @@ header.masthead {
         text-align: right;
         margin-right: 70%;
       }
+    }
+    .scrollDownBtn {
+      border: 1px solid $white;
+      color: $white;
+      font-weight: 100;
+      margin: 0 auto;
+      width: 50px;
     }
   }
 }

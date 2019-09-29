@@ -1,5 +1,6 @@
 // Styling for the navbar
 #mainNav {
+  position: absolute;
   background-color: $gray-900;
   .container, .container-fluid {
     margin: unset;
@@ -33,10 +34,16 @@
         letter-spacing: 1px;
         color: $text-gray;
         @include heading-font;
+        > span {
+          padding: 5px;
+        }
         &.active,
         &:hover {
           color: $primary;
-          text-decoration: underline;
+          // text-decoration: underline;
+          > span {
+            border-bottom: 2px solid;
+          }
         }
       }
     }
@@ -44,6 +51,7 @@
 }
 @media(min-width:992px) {
   #mainNav {
+    position: absolute;
     padding-top: 25px;
     padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
