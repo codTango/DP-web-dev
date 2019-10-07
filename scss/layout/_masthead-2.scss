@@ -1,0 +1,123 @@
+// Styling for the masthead
+header.masthead-2 {
+  height: 100vh;
+  text-align: center;
+  color: white;
+  background-image: url('../img/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  .intro-text {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .intro-lead-in {
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 25px;
+      @include heading-font;
+    }
+    .intro-heading {
+      font-size: 50px;
+      line-height: 50px;
+      margin-bottom: 25px;
+      @include heading-font;
+      text-align: center;
+    }
+  }
+  .scrollDownBtn {
+    border: 1px solid $white;
+    color: $white;
+    font-weight: 100;
+    margin: 0 auto;
+    width: 50px;
+  }
+}
+@media(min-width:768px) {
+  header.masthead {
+    .intro-text {
+      padding-top: 300px;
+      padding-bottom: 200px;
+      .intro-lead-in {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 25px;
+        @include heading-font;
+      }
+      .intro-heading {
+        font-size: 75px;
+        line-height: 75px;
+        margin-bottom: 25px;
+        @include heading-font;
+        text-align: center;
+      }
+    }
+    .scrollDownBtn {
+      border: 1px solid $white;
+      color: $white;
+      font-weight: 100;
+      margin: 0 auto;
+      width: 50px;
+    }
+  }
+}
+@media(min-width:1024px) {
+  header.masthead {
+    .intro-text {
+      padding-top: 150px;
+      padding-bottom: 150px;
+      .intro-lead-in {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 25px;
+        @include heading-font;
+      }
+      .intro-heading {
+        font-size: 75px;
+        line-height: 75px;
+        margin-bottom: 25px;
+        @include heading-font;
+        text-align: center;
+      }
+    }
+    .scrollDownBtn {
+      border: 1px solid $white;
+      color: $white;
+      font-weight: 100;
+      margin: 0 auto;
+      width: 50px;
+    }
+  }
+}
+@media(min-width:1200px) {
+  header.masthead {
+    .container {
+      max-width: 1300px;
+    }
+    .intro-text {
+      padding-top: 300px;
+      padding-bottom: 200px;
+      .intro-lead-in {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 25px;
+        @include heading-font;
+      }
+      .intro-heading {
+        font-size: 75px;
+        line-height: 75px;
+        margin-bottom: 25px;
+        @include heading-font;
+        text-align: right;
+        margin-right: 70%;
+      }
+    }
+    .scrollDownBtn {
+      border: 1px solid $white;
+      color: $white;
+      font-weight: 100;
+      margin: 0 auto;
+      width: 50px;
+    }
+  }
+}

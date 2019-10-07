@@ -1,25 +1,57 @@
 // Styling for the contact section
 section#contact {
+  .container {
+    margin: 0 auto;
+  }
   .contact-box {
+    height: 400px;
     background-image: url('../img/contact.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  .section-heading {
+  .contact-section-heading {
     color: $white;
+    text-align: right;
+  }
+  .contact-heading-1 {
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1;
+  }
+  .contact-heading-2 {
+    font-size: 29px;
+    font-weight: 100;
+    line-height: 1;
+  }
+  .contact-heading-line {
+    border-bottom: 1px solid $white;
+    margin: 20px 0 20px 70px;
+  }
+  .contact-form {
+    padding: 0;
+    background: rgba(0, 0, 0, 0.7);
   }
   .form-group {
     margin-bottom: 25px;
+    text-align: center;
+
     input,
     textarea {
-      padding: 20px;
+      margin: 0 auto;
     }
     input.form-control {
-      height: auto;
+      height: 30px;
+      width: 50%;
     }
     textarea.form-control {
       height: 248px;
+    }
+    button {
+      padding: 0 20px;
+      background-color: transparent;
+      color: $white;
+      border: 2px solid $white;
     }
   }
   .form-control:focus {
@@ -27,22 +59,22 @@ section#contact {
     box-shadow: none;
   }
   ::-webkit-input-placeholder {
-    font-weight: 700;
+    font-weight: 400;
     color: $gray-400;
     @include heading-font;
   }
   :-moz-placeholder {
-    font-weight: 700;
+    font-weight: 400;
     color: $gray-400;
     @include heading-font;
   }
   ::-moz-placeholder {
-    font-weight: 700;
+    font-weight: 400;
     color: $gray-400;
     @include heading-font;
   }
   :-ms-input-placeholder {
-    font-weight: 700;
+    font-weight: 400;
     color: $gray-400;
     @include heading-font;
   }

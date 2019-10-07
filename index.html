@@ -28,7 +28,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#home-page">
-        <img class="img-fluid" src="img/logo.svg" alt="logo">
+        <img class="img-fluid logo-img" src="img/logo.svg" alt="logo">
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -43,7 +43,7 @@
             <a class="nav-link js-scroll-trigger" href="#about-page"><span>About</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#work-page"><span>Work</span></a>
+            <a class="nav-link js-scroll-trigger" href="./work.html"><span>Work</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#client-page"><span>Client</span></a>
@@ -217,15 +217,15 @@
       </div>
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+          <p class="large text-muted">The gallery here</p>
         </div>
       </div>
 
       <!-- View More Btn -->
       <div class="col-lg-12 text-center view-more">
-          <div id="success"></div>
-          <button id="viewMore" class="btn btn-primary btn-xl text-uppercase" type="submit">View More</button>
-        </div>
+        <div id="success"></div>
+        <button id="viewMore" class="btn btn-primary btn-xl text-uppercase" type="submit">View More</button>
+      </div>
     </div>
     <!-- Down Arrow -->
     <div class="text-center arrow-down">
@@ -243,21 +243,25 @@
         </div>
       </div>
       <div class="row contact-box">
-        <div class="col-lg-6">
+        <div class="contact-background"></div>
+        <div class="col-lg-6 contact-form">
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="row">
               <div class="col">
+                <div class="col-sm-4 contact-section-heading text-uppercase">
+                    <div class="contact-heading-1">Free</div>
+                    <div class="contact-heading-2">Designing</div>
+                    <div class="contact-heading-line"></div>
+                </div>
+
                 <div class="form-group">
                   <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
-                  <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="email" type="email" placeholder="Tell" required="required" data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
+                  <input class="form-control" id="phone" type="tel" placeholder="Tell" required="required" data-validation-required-message="Please enter your email address.">
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="phone" type="tel" placeholder="E-mail" required="required" data-validation-required-message="Please enter your phone number.">
-                  <p class="help-block text-danger"></p>
+                  <input class="form-control" id="email" type="email" placeholder="E-mail" required="required" data-validation-required-message="Please enter your phone number.">
                 </div>
                 <div class="form-group">
                     <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Consultatio</button>
@@ -268,18 +272,34 @@
           </form>
         </div>
       </div>
+
+      <!-- View More Btn -->
+      <div class="col-lg-12 text-center view-more">
+        <div id="success"></div>
+        <button id="viewMore" class="btn btn-primary btn-xl text-uppercase" type="submit">View More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo -->
+  <section class="bg-light page-section" id="bottom-logo">
+    <div class="container">
+      <div style="text-align: center;">
+        <a class="js-scroll-trigger" href="#home-page">
+          <img class="img-fluid logo-img" src="img/logo.svg" alt="logo">
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div><a class="nav-link js-scroll-trigger scrollDownBtn" href="#page-top">^</a></div>
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Your Website 2019</span>
+      <div class="row align-items-center footer-first-row">
+        <div class="col-md-12">
+          <div><a class="nav-link js-scroll-trigger scrollUpBtn" href="#page-top">^</a></div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-12 social-buttons-layout">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
               <a href="#">
@@ -296,19 +316,28 @@
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
             <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
             </li>
           </ul>
         </div>
       </div>
+      <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="footer-item">
+              <a href="#">Tell: +86 021-68550952</a>
+            </li>
+            <li class="footer-item">
+                <a href="#">E-mail:</a>
+            </li>
+            <li class="footer-item">
+                <a href="#">Address:</a>
+            </li>
+          </ul>
+        </div>
+      <span class="copyright">Copyright &copy; Your Website 2019</span>
     </div>
   </footer>
 
