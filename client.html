@@ -91,8 +91,10 @@
   <script src="js/dp-web.js"></script>
 
   <script>
-    $(function() {
-      $('#resuable-header').load('./resuable-header.html');
+    $(document).ready(function() {
+      $('#resuable-header').load('./resuable-header.html', function() {
+        $('.intro-text').html('<div id="intro-heading-1" class="intro-heading text-uppercase">Our Client<div class="second-line"><span class="underline">我们的客户</span></div></div>');
+      });
       $('#resuable-footer').load('./resuable-footer.html');
     });
   </script>
