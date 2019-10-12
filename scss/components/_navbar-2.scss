@@ -3,6 +3,7 @@
   position: absolute;
   background-color: $white;
   padding: 0;
+  height: 80px;
   .container, .container-fluid {
     margin: unset;
   }
@@ -11,7 +12,7 @@
     right: 0;
     padding: 13px;
     text-transform: uppercase;
-    color: white;
+    color: black;
     border: 0;
     // background-color: $primary;
     @include heading-font;
@@ -23,7 +24,7 @@
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      color: black;
     }
   }
   .navbar-nav {
@@ -40,7 +41,7 @@
         }
         &.active,
         &:hover {
-          color: $primary;
+          color: $black;
           // text-decoration: underline;
           > span {
             border-bottom: 2px solid;
@@ -52,6 +53,7 @@
 }
 @media(min-width:992px) {
   #mainNav-2 {
+    height: 80px;
     position: absolute;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;

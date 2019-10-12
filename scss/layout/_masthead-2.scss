@@ -1,123 +1,93 @@
-// Styling for the masthead
+// Styling for the masthead-2
 header.masthead-2 {
-  height: 100vh;
+  height: 25vh;
+  margin-top: 80px;
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('../img/header-bg-2.png');
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: left;
   background-size: cover;
+
   .intro-text {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    .intro-lead-in {
-      font-size: 22px;
-      line-height: 22px;
-      margin-bottom: 25px;
-      @include heading-font;
-    }
+    padding-top: 8vh;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+
     .intro-heading {
-      font-size: 50px;
-      line-height: 50px;
-      margin-bottom: 25px;
+      color: $text-gray;
+      font-size: 16px;
+      line-height: 18px;
       @include heading-font;
       text-align: center;
     }
   }
-  .scrollDownBtn {
-    border: 1px solid $white;
-    color: $white;
-    font-weight: 100;
-    margin: 0 auto;
-    width: 50px;
+  .second-line {
+    margin-top: 5px;
+    text-align: center;
+  }
+  .underline {
+    padding-bottom: 10px;
   }
 }
 @media(min-width:768px) {
-  header.masthead {
+  header.masthead-2 {
     .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
-      .intro-lead-in {
-        font-size: 35px;
-        line-height: 40px;
-        margin-bottom: 25px;
-        @include heading-font;
-      }
+      margin-left: 5vw;
+      display: flex;
+      flex-direction: row;
+      
       .intro-heading {
-        font-size: 75px;
-        line-height: 75px;
-        margin-bottom: 25px;
+        color: $text-gray;
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0 10px;
         @include heading-font;
         text-align: center;
       }
-    }
-    .scrollDownBtn {
-      border: 1px solid $white;
-      color: $white;
-      font-weight: 100;
-      margin: 0 auto;
-      width: 50px;
     }
   }
 }
 @media(min-width:1024px) {
-  header.masthead {
+  header.masthead-2 {
     .intro-text {
-      padding-top: 150px;
-      padding-bottom: 150px;
-      .intro-lead-in {
-        font-size: 35px;
-        line-height: 40px;
-        margin-bottom: 25px;
-        @include heading-font;
-      }
+      padding-top: 10vh;
+      margin-left: 20vw;
+      display: flex;
+      flex-direction: row;
+
       .intro-heading {
-        font-size: 75px;
-        line-height: 75px;
-        margin-bottom: 25px;
+        color: $text-gray;
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0 10px;
         @include heading-font;
         text-align: center;
       }
     }
-    .scrollDownBtn {
-      border: 1px solid $white;
-      color: $white;
-      font-weight: 100;
-      margin: 0 auto;
-      width: 50px;
-    }
   }
 }
 @media(min-width:1200px) {
-  header.masthead {
+  header.masthead-2 {
     .container {
       max-width: 1300px;
     }
     .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
-      .intro-lead-in {
-        font-size: 35px;
-        line-height: 40px;
-        margin-bottom: 25px;
-        @include heading-font;
-      }
+      padding-top: 10vh;
+      margin-left: 30vw;
+      display: flex;
+      flex-direction: row;
+      
       .intro-heading {
-        font-size: 75px;
-        line-height: 75px;
-        margin-bottom: 25px;
+        color: $text-gray;
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0 30px;
         @include heading-font;
         text-align: right;
-        margin-right: 70%;
       }
-    }
-    .scrollDownBtn {
-      border: 1px solid $white;
-      color: $white;
-      font-weight: 100;
-      margin: 0 auto;
-      width: 50px;
     }
   }
 }
