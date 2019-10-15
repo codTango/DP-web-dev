@@ -1,5 +1,13 @@
 # DP-web
 
+## The files needed to include
+  - all html file
+  - img folder
+  - fonts folder
+  - all min.js files
+  - vendor folder
+  - css folder
+
 ### install node packages
 `npm install`
 
