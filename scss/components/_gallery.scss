@@ -19,7 +19,6 @@
       }
 
       &.active,
-      &:active,
       &:focus {
         .box-button {
           background-color: $black;

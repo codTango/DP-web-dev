@@ -29,14 +29,14 @@
   <section class="bg-light page-section" id="contact">
     <div class="container">
       <div class="gallery-nav-1">
-        <div id="nav-1" class="gallery-nav-item text-uppercase">
-          <a href="#gallery-1">
+        <div id="nav-one" class="gallery-nav-item text-uppercase">
+          <a class="ga-trigger" href="#" data-section="1">
             <div class="box-button">Individual Stand</div>
             <div class="second-line">特装展位</div>
           </a>
         </div>
-        <div id="nav-2" class="gallery-nav-item text-uppercase">
-          <a href="#gallery-2">
+        <div id="nav-two" class="gallery-nav-item text-uppercase">
+          <a class="ga-trigger" href="#" data-section="2">
             <div class="box-button">National Pavilion</div>
             <div class="second-line">国家展团</div>
           </a>
@@ -45,29 +45,29 @@
 
       <div class="gallery-nav-2">
         <div id="nav-1" class="gallery-nav-item text-uppercase">
-          <a href="#gallery-1"><span class="nav-text">全部</span></a>
+          <a href="#" data-list="1"><span class="nav-text">全部</span></a>
         </div>
         <div id="nav-2" class="gallery-nav-item text-uppercase">
-          <a href="#gallery-2"><span class="nav-text">德国</span></a>
+          <a href="#" data-list="2"><span class="nav-text">德国</span></a>
         </div>
         <div id="nav-3" class="gallery-nav-item text-uppercase">
-          <a href="#gallery-3"><span class="nav-text">迪拜</span></a>
+          <a href="#" data-list="3"><span class="nav-text">迪拜</span></a>
         </div>
         <div id="nav-4" class="gallery-nav-item text-uppercase">
-          <a href="#gallery-4"><span class="nav-text">日本</span></a>
+          <a href="#" data-list="4"><span class="nav-text">日本</span></a>
         </div>
         <div id="nav-5" class="gallery-nav-item text-uppercase">
-          <a href="#gallery-5"><span class="nav-text">法国</span></a>
+          <a href="#" data-list="5"><span class="nav-text">法国</span></a>
         </div>
         <div id="nav-6" class="gallery-nav-item text-uppercase">
-          <a href="#gallery-6"><span class="nav-text">意大利</span></a>
+          <a href="#" data-list="6"><span class="nav-text">意大利</span></a>
         </div>
         <div id="nav-7" class="gallery-nav-item text-uppercase">
-          <a href="#gallery-7"><span class="nav-text">俄罗斯</span></a>
+          <a href="#" data-list="7"><span class="nav-text">俄罗斯</span></a>
         </div>
       </div>
 
-      <div class="gallery">
+      <div id="gallery-1" class="gallery set-1">
         <div class="row">
           <a href="./img/work-gallery/1.jpg" data-toggle="lightbox" data-gallery="gallery" class="img-tile col-md-4">
             <img src="./img/work-gallery/1.jpg" class="img-fluid rounded grayscale">
@@ -146,7 +146,9 @@
 
   <script>
     $(function() {
-      $('#resuable-header').load('./resuable-header.html');
+      $('#resuable-header').load('./resuable-header.html', function() {
+        $('a.js-scroll-trigger[href*="./work.html"]:not([href="#"])').addClass("active");
+      });
       $('#resuable-footer').load('./resuable-footer.html');
     });
 
@@ -155,6 +157,16 @@
       // lightbox - enable if need
       // $(this).ekkoLightbox();
     });
+
+    $(document).ready(function() {
+      var page = 1;
+      var section = 1;
+      var list = 1;
+
+      $('a.js-trigger[data-page="1"]').addClass("active");
+      $('a.ga-trigger[data-section="1"]').addClass("active");
+      $('a[data-list="1"]').addClass("active");
+    })
   </script>
 
 </body>

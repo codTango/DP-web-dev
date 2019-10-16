@@ -22,6 +22,23 @@ header.masthead-2 {
       line-height: 18px;
       @include heading-font;
       text-align: center;
+
+      .underline {
+        border-bottom: none;
+      }
+
+      a {
+        text-decoration: none;
+  
+        &.active,
+        &:focus,
+        &:hover {
+          color: $white;
+          .underline {
+            border-bottom: 2px solid;
+          }
+        }
+      }
     }
   }
   .second-line {

@@ -439,7 +439,7 @@ img::-moz-selection {
   margin-bottom: 10px;
 }
 
-.gallery-nav-1 .gallery-nav-item a.active .box-button, .gallery-nav-1 .gallery-nav-item a:active .box-button, .gallery-nav-1 .gallery-nav-item a:focus .box-button {
+.gallery-nav-1 .gallery-nav-item a.active .box-button, .gallery-nav-1 .gallery-nav-item a:focus .box-button {
   background-color: #000;
   color: #fff;
 }
@@ -785,6 +785,22 @@ header.masthead-2 .intro-text .intro-heading {
   line-height: 18px;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   text-align: center;
+}
+
+header.masthead-2 .intro-text .intro-heading .underline {
+  border-bottom: none;
+}
+
+header.masthead-2 .intro-text .intro-heading a {
+  text-decoration: none;
+}
+
+header.masthead-2 .intro-text .intro-heading a.active, header.masthead-2 .intro-text .intro-heading a:focus, header.masthead-2 .intro-text .intro-heading a:hover {
+  color: #fff;
+}
+
+header.masthead-2 .intro-text .intro-heading a.active .underline, header.masthead-2 .intro-text .intro-heading a:focus .underline, header.masthead-2 .intro-text .intro-heading a:hover .underline {
+  border-bottom: 2px solid;
 }
 
 header.masthead-2 .second-line {
