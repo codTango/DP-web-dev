@@ -480,6 +480,27 @@ img::-moz-selection {
   height: 250px;
 }
 
+.gallery .img-tile p {
+  width: 330px;
+  font-size: 16px;
+  font-weight: 200;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 25%;
+  text-align: center;
+  background: #f1f1f1;
+  color: #2d434e;
+  padding: 0.5em;
+  font-weight: 800;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.gallery .img-tile:hover p {
+  opacity: 1;
+}
+
 .grayscale {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
