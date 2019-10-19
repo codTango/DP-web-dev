@@ -44,7 +44,7 @@
       </div>
 
       <!-- Gallery level 3 navbar -->
-      <div class="gallery-nav-2">
+      <div id="gallery-nav-2" class="gallery-nav-2">
         <div id="nav-1" class="gallery-nav-item text-uppercase">
           <a href="#" data-list="1" data-toggle="list"><span class="nav-text">全部</span></a>
         </div>
@@ -71,8 +71,11 @@
       <!-- Gallery images -->
       <div id="gallery-1" class="gallery"></div>
 
+      <!-- Gallery images -->
+      <div id="gallery-detail" class="gallery-detail"></div>
+
       <!-- View More Btn -->
-      <div class="col-lg-12 text-center view-more">
+      <div id="viewMore-container" class="col-lg-12 text-center view-more">
         <div id="success"></div>
         <button id="viewMore" class="btn btn-primary btn-xl text-uppercase" type="submit">View More</button>
       </div>
@@ -96,95 +99,12 @@
   <!-- http://ashleydw.github.io/lightbox/ -->
   <script src="js/ekko-lightbox.min.js"></script>
 
-  <!-- Custom scripts -->
-  <script src="js/dp-web.js"></script>
-
   <!-- JSON file contains all image title and description -->
-  <script type="text/javascript" language="javascript" src="description.js"></script> 
+  <script type="text/javascript" language="javascript" src="description.js"></script>
 
-  <script>
-    // const var; change the number if need
-    var IMAGELIMIT = 30;
-    var page = 1;
-    var section = 1;
-    var list = 1;
-
-    function loadImages(num) {
-      var curItemLen = $("#gallery-1").find(".img-tile").length;
-      var item = curItemLen + 1;
-      var rowNum = num / 3;
-      var row = '';
-      var gallery = jsonData.gallery;
-
-      for (var i = 0; i < rowNum; i++) {
-        row += '<div class="row">';
-        for (var j = 0; j < 3; j++) {
-          var url = 'img/work-gallery/'+page+'/'+section+'/'+list+'/'+item+'.jpg';
-          var title = gallery[page] && gallery[page][section] && gallery[page][section][list] && gallery[page][section][list][item] && gallery[page][section][list][item]['title'];
-
-          row += '<div class="img-tile col-md-4">';
-          row += '<a href="' + url + '" data-toggle="lightbox" data-gallery="gallery">';
-          row += '<img src="' + url + '" class="img-fluid rounded grayscale">';
-          row += '</a>';
-          row += '<p>' + title + '</p>';
-          row += '</div>';
-          item++;
-        }
-        row += '</div>';
-      }
-      $("#gallery-1").append(row);
-    }
-
-    $(document).ready(function() {
-      $('#resuable-header').load('./resuable-header.html', function() {
-        $('a.js-trigger[data-page="1"]').addClass("active");
-        $('a.ga-trigger[data-section="1"]').addClass("active");
-        $('a[data-list="1"]').addClass("active");
-        loadImages(12);
-      });
-      $('#resuable-footer').load('./resuable-footer.html');
-    });
-
-    $(document).on("click", '[data-toggle="lightbox"]', function(event) {
-      event.preventDefault();
-      // render image detail
-
-      // lightbox - enable if need
-      // $(this).ekkoLightbox();
-    });
-
-    $(document).on("click", '[data-toggle="page"]', function(event) {
-      $('a.js-trigger[data-page="' + page + '"]').removeClass("active");
-      page = $(this).data('page');
-      $('a.js-trigger[data-page="' + page + '"]').addClass("active");
-
-      $("#gallery-1").empty();
-      loadImages(12);
-    });
-    $(document).on("click", '[data-toggle="section"]', function(event) {
-      $('a.ga-trigger[data-section="' + section + '"]').removeClass("active");
-      section = $(this).data('section');
-      $('a.ga-trigger[data-section="' + section + '"]').addClass("active");
-
-      $("#gallery-1").empty();
-      loadImages(12);
-    });
-    $(document).on("click", '[data-toggle="list"]', function(event) {
-      $('a[data-list="' + list + '"]').removeClass("active");
-      list = $(this).data('list');
-      $('a[data-list="' + list + '"]').addClass("active");
-
-      $("#gallery-1").empty();
-      loadImages(12);
-    });
-
-    $("#viewMore").click(function() {
-      if ($("#gallery-1").find(".img-tile").length !== IMAGELIMIT) {
-        loadImages(3);
-      }
-    });
-  </script>
-
+  <!-- Custom scripts -->
+  <script src="js/dp-web.min.js"></script>
+  <script src="js/work.js"></script>
 </body>
 
 </html>

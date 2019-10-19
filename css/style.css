@@ -439,7 +439,7 @@ img::-moz-selection {
   margin-bottom: 10px;
 }
 
-.gallery-nav-1 .gallery-nav-item a.active .box-button, .gallery-nav-1 .gallery-nav-item a:focus .box-button {
+.gallery-nav-1 .gallery-nav-item a.active .box-button, .gallery-nav-1 .gallery-nav-item a:active .box-button, .gallery-nav-1 .gallery-nav-item a:focus .box-button {
   background-color: #000;
   color: #fff;
 }
@@ -499,6 +499,65 @@ img::-moz-selection {
 
 .gallery .img-tile:hover p {
   opacity: 1;
+}
+
+.gallery-detail {
+  margin-top: 30px;
+}
+
+.gallery-detail .main-img {
+  height: 450px;
+}
+
+.gallery-detail .thumbnail {
+  margin-top: 30px;
+}
+
+.gallery-detail .thumbnail a {
+  cursor: pointer;
+}
+
+.gallery-detail .thumbnail a img {
+  height: 150px;
+}
+
+.gallery-detail .thumbnail a img.active, .gallery-detail .thumbnail a img:active, .gallery-detail .thumbnail a img:focus, .gallery-detail .thumbnail a img:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.gallery-detail .img-desc {
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: 2px solid #000;
+  height: 350px;
+}
+
+.gallery-detail .nav-btn {
+  margin-left: 10px;
+}
+
+.gallery-detail .nav-btn .leftArrow,
+.gallery-detail .nav-btn .rightArrow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  cursor: pointer;
+  background-color: #003232;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  margin-top: 70px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gallery-detail .nav-btn .rightArrow {
+  left: 80px;
 }
 
 .grayscale {

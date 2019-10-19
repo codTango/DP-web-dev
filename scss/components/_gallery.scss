@@ -19,6 +19,7 @@
       }
 
       &.active,
+      &:active,
       &:focus {
         .box-button {
           background-color: $black;
@@ -86,6 +87,61 @@
 
   .img-tile:hover p {
     opacity: 1;
+  }
+}
+
+$image-height: 450px;
+
+.gallery-detail {
+  margin-top: 30px;
+  .main-img {
+    height: $image-height;
+  }
+  .thumbnail {
+    margin-top: 30px;
+    a {
+      cursor: pointer;
+      img {
+        height: 150px;
+        &.active,
+        &:active,
+        &:focus,
+        &:hover {
+          -webkit-filter: none;
+          filter: none;
+        }
+      }
+    }
+  }
+  .img-desc {
+    margin-left: 10px;
+    padding-left: 20px;
+    border-left: 2px solid $black;
+    height: $image-height - 100px;
+  }
+  .nav-btn {
+    margin-left: 10px;
+    .leftArrow,
+    .rightArrow {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 26px;
+      cursor: pointer;
+      background-color: #003232;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+      margin-top: 70px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .rightArrow {
+      left: 80px;
+    }
   }
 }
 
