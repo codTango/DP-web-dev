@@ -16,7 +16,7 @@
     var item = curItemLen + 1;
     var rowNum = num / 3;
     var row = '';
-    var gallery = jsonData.gallery;
+    var gallery = galleryData;
 
     for (var i = 0; i < rowNum; i++) {
       row += '<div class="row">';
@@ -43,7 +43,7 @@
     $("#viewMore-container").hide();
     $("#gallery-1").empty();
     imgId = id;
-    var gallery = jsonData.gallery;
+    var gallery = galleryData;
     var row = '<div class="container">'
       + '<div class="row">'
       + '<div class="col-md-9">'

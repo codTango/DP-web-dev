@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="D&P Website">
+  <meta name="author" content="Connor Tang">
+
+  <title>D&P</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles -->
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+  <span id="resuable-header"></span>
+
+  <!-- News -->
+  <section class="bg-light page-section" id="news">
+    <div class="container">
+      <div id="news-nav-1" class="news-nav-1">
+        <div id="nav-1" class="news-nav-item text-uppercase">
+          <a href="#" data-list="1" data-toggle="list"><span class="nav-text">全部</span></a>
+        </div>
+        <div id="nav-2" class="news-nav-item text-uppercase">
+          <a href="#" data-list="2" data-toggle="list"><span class="nav-text">展会消息</span></a>
+        </div>
+        <div id="nav-3" class="news-nav-item text-uppercase">
+          <a href="#" data-list="3" data-toggle="list"><span class="nav-text">设计观点</span></a>
+        </div>
+        <div id="nav-4" class="news-nav-item text-uppercase">
+          <a href="#" data-list="4" data-toggle="list"><span class="nav-text">公司活动</span></a>
+        </div>
+      </div>
+
+      <!-- where to load the news images -->
+      <div id="news-image"></div>
+
+      <!-- View More Btn -->
+      <div class="col-lg-12 text-center view-more">
+        <button id="viewMore" style="background-color: transparent;" class="btn btn-primary btn-xl text-uppercase" type="submit">View More</button>
+      </div>
+    </div>
+  </section>
+
+  <span id="resuable-footer"></span>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- JSON file contains all image title and description -->
+  <script type="text/javascript" language="javascript" src="metadata/news.js"></script>
+
+  <!-- Custom scripts -->
+  <script src="js/dp-web.min.js"></script>
+
+  <script>
+    var newsList = 1;
+    var newsNum = 1;
+
+    function loadImages() {
+      var news = newsData;
+      var odd = `<div style="margin-top: 30px;" class="row">
+        <div class="col-6">
+          <div class="row">
+            <div style="padding: 0 30px;" class="col-10">
+              <div style="font-size: 22px; font-weight: bold;">${news[newsList][newsNum]['title']}</div>
+              <p>${news[newsList][newsNum]['description']}</p>
+            </div>
+            <div class="col-2"><img style="transform: rotate(-90deg);" class="img-fluid" src="img/arrow-down.svg" alt="arrow-down" /></div>
+          </div>
+        </div>
+        <div class="col-6"><img style="width: 100%; height: 100%" src="img/news/${newsList}/${newsNum}.jpg"/></div>
+      </div>`;
+
+      var even = `<div style="margin-top: 30px;" class="row">
+        <div class="col-6"><img style="width: 100%; height: 100%" src="img/news/${newsList}/${newsNum}.jpg"/></div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-2 move-right"><img style="transform: rotate(90deg);" class="img-fluid" src="img/arrow-down.svg" alt="arrow-down" /></div>
+            <div style="padding: 0 30px;" class="col-10">
+              <div style="font-size: 22px; font-weight: bold;">${news[newsList][newsNum]['title']}</div>
+              <p>${news[newsList][newsNum]['description']}</p>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+      var row = newsNum % 2 === 0 ? even: odd;
+
+      $("#news-image").append(row);
+    };
+
+    $(document).ready(function() {
+      $('#resuable-header').load('./resuable-header.html', function() {
+        $('.intro-text').html('<div id="intro-heading-1" class="intro-heading text-uppercase">News<div class="second-line"><span class="underline">新闻中心</span></div></div>');
+        $("a.nav-link.js-scroll-trigger:eq(4)").addClass("active");
+        $('a[data-list="1"]').addClass("active");
+
+        $("#news-image").empty();
+        loadImages();
+        newsNum++;
+        loadImages();
+        newsNum++;
+        loadImages();
+      });
+      $('#resuable-footer').load('./resuable-footer.html');
+    });
+
+    $(document).on("click", '[data-toggle="list"]', function(event) {
+      $('a[data-list="' + newsList + '"]').removeClass("active");
+      newsList = $(this).data('list');
+      $('a[data-list="' + newsList + '"]').addClass("active");
+
+      $("#news-image").empty();
+      newsNum = 1;
+      loadImages();
+      newsNum++;
+      loadImages();
+      newsNum++;
+      loadImages();
+    });
+
+    $("#viewMore").click(function() {
+      newsNum++;
+      loadImages();
+    });
+  </script>
+
+</body>
+
+</html>
