@@ -716,6 +716,29 @@ img::-moz-selection {
     -webkit-transform: scale(1);
   }
 }
+.img-tile {
+  border: 1px solid black;
+}
+
+.image-mosaic {
+  margin: 0;
+  padding: 0;
+}
+
+.image-mosaic * {
+  margin: 0;
+  padding: 0;
+}
+
+.image-mosaic div {
+  height: 100%;
+}
+
+.image-mosaic img {
+  width: 100%;
+  height: 100%;
+}
+
 header.masthead {
   height: 100vh;
   text-align: center;
