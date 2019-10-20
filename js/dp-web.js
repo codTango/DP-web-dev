@@ -56,7 +56,4 @@
   // Collapse now if page is not at top
   secondNavbarCollapse();
 
-  // Work page
-  
-
 })(jQuery); // End of use strict
