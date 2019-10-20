@@ -716,10 +716,6 @@ img::-moz-selection {
     -webkit-transform: scale(1);
   }
 }
-.img-tile {
-  border: 1px solid black;
-}
-
 .image-mosaic {
   margin: 0;
   padding: 0;
@@ -737,6 +733,26 @@ img::-moz-selection {
 .image-mosaic img {
   width: 100%;
   height: 100%;
+}
+
+.image-mosaic .img-tile p {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 0.5em;
+  font-weight: 800;
+  opacity: 0.5;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.image-mosaic .img-tile:hover p {
+  opacity: 0;
 }
 
 header.masthead {

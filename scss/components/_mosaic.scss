@@ -1,7 +1,3 @@
-.img-tile {
-  border: 1px solid black;
-}
-
 .image-mosaic {
   margin: 0;
   padding: 0;
@@ -15,5 +11,26 @@
   img {
     width: 100%;
     height: 100%;
+  }
+
+  .img-tile p {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 200;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: $black;
+    color: $white;
+    padding: 0.5em;
+    font-weight: 800;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+  }
+
+  .img-tile:hover p {
+    opacity: 0;
   }
 }
