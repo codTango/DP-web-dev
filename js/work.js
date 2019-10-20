@@ -71,6 +71,7 @@
 
   $(document).ready(function() {
     $('#resuable-header').load('./resuable-header.html', function() {
+      $("a.nav-link.js-scroll-trigger:eq(2)").addClass("active");
       $('a.js-trigger[data-page="1"]').addClass("active");
       $('a.ga-trigger[data-section="1"]').addClass("active");
       $('a[data-list="1"]').addClass("active");
