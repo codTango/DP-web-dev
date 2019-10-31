@@ -144,13 +144,22 @@ img::-moz-selection {
   width: 800px;
   height: 200px;
   padding: 20px 40px;
-  margin-left: 100px;
+  //margin-left: 100px;
   z-index: 999;
 }
 .img-right {
   height: 350px;
   width: 850px;
   position: absolute;
-  left: 600px;
+  left: 400px;
   top: -70px;
+}
+
+textarea {
+  background-color: transparent;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid black;
 }
