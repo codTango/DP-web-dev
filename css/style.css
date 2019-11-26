@@ -1567,8 +1567,9 @@ section#contact :-ms-input-placeholder {
   border: 1px solid #fff;
   color: #fff;
   font-weight: 100;
-  margin: 0 auto;
+  margin: 0 -235px 0 auto;
   width: 50px;
+  display: inline-block;
 }
 
 .footer .footer-item {
@@ -1588,7 +1589,7 @@ section#contact :-ms-input-placeholder {
 }
 
 .social-buttons-layout {
-  top: -42px;
+  float: right;
 }
 
 ul.social-buttons {

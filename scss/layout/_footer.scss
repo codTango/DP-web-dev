@@ -23,8 +23,9 @@
     border: 1px solid $white;
     color: $white;
     font-weight: 100;
-    margin: 0 auto;
+    margin: 0 -235px 0 auto;
     width: 50px;
+    display: inline-block;
   }
   .footer-item {
     display: flex;
@@ -41,7 +42,8 @@
   }
 }
 .social-buttons-layout {
-  top: -42px;
+  // top: -42px;
+  float: right;
 }
 ul.social-buttons {
   margin-bottom: 0;
